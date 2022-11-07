@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
@@ -11,14 +11,145 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-
 	<body>
-        <section id="headline">
-            <h1 id="pagetitle">YOUTUBE THUMBNAIL SELECTOR</h1>
-        </section>
-        <canvas id="main">
-            
-        </canvas>
+
+<!-- Images -->
+<body>
+
+<!-- TITLE -->
+<h1 id="pagetitle">YOUTUBE THUMBNAIL SELECTOR</h1>
+
+<!-- Choose a Background -->
+<!-- /////////////////////// -->
+<!-- Thumbnail -->
+<h2>1. CHOOSE A BACKGROUND - <span>(You can only pick one)</span></h2>
+
+<label><input type="radio" value="show" onclick="img(1)" name="lang">
+	<img src="img/backgrounds/bg_1.png" alt="background 1">
+</label>
+
+<label><input type="radio" value="hide" onclick="img(2)" name="lang">
+	<img src="img/backgrounds/bg_2.png" alt="background 2">
+</label>
+
+<label><input type="radio" value="show" onclick="img(3)" name="lang">
+	<img src="img/backgrounds/bg_3.png" alt="background 3">
+</label>
+
+<label><input type="radio" value="show" onclick="img(4)" name="lang">
+	<img src="img/backgrounds/bg_4.png" alt="background 4">
+</label>
+
+<!-- Image Placement -->
+<section class="images">
+<img id="myimg" src="img/backgrounds/bg_1.png" alt="background 1" style="display:none;">
+<img id="myimg2" src="img/backgrounds/bg_2.png" alt="background 2" style="display:;">
+<img id="myimg3" src="img/backgrounds/bg_3.png" alt="background 3" style="display:none;">
+<img id="myimg4" src="img/backgrounds/bg_4.png" alt="background 4" style="display:none;">
+</section>
+
+<!-- Choose a Title Position -->
+<!-- /////////////////////// -->
+<!-- Thumbnail -->
+<section id="titles">
+	<section id="title1" onclick="txt(1)" name="lang">
+		<span>ENTER YOUR</Span>
+		<span>TITLE HERE</Span>
+		</section>
+	<section id="title2" onclick="txt(2)" name="lang">ENTER TITLE</section>
+	<section id="title3" onclick="txt(3)" name="lang">
+		<span>YOUR TITLE</Span>
+		<span>HERE</Span>
+	</section>
+	<section id="title4" onclick="txt(4)" name="lang">
+		<span>ENTER YOUR</Span>
+		<span>TITLE HERE</Span>
+	</section>
+</section>
+
+<!-- Large Title Position -->
+<section class="headings1">
+	<h1 id="mytxt" style="display:none">
+		<form>
+	    <div class="group">
+	      <input type="text" placeholder="ENTER YOUR" required>
+	      <input type="text" placeholder="TITLE HERE" required>
+	      <span class="highlight"></span>
+	    </div>
+	  </form>
+</section>
+
+<section class="headings1">
+	<h1 id="mytxt2" style="display:">
+		<form>
+	    <div class="group">
+	      <input type="text" placeholder="ENTER YOUR" required>
+	      <span class="highlight"></span>
+	    </div>
+	  </form>
+</section>
+
+
+<!-- Preview of Completed Thumbnail -->
+<section id="placeholder"></section>
+
+<!-- Additional Image Options -->
+<section class="addoptions">
+	<label><input type="radio" value="show" onclick="imgs(1)" name="lang">
+		<img src="img/Images/placeholders/01.png" alt="background 1">
+	</label>
+
+	<label><input type="radio" value="hide" onclick="imgs(2)" name="lang">
+		<img src="img/Images/placeholders/02.png" alt="background 2">
+	</label>
+
+	<label><input type="radio" value="show" onclick="imgs(3)" name="lang">
+		<img src="img/Images/placeholders/03.png" alt="background 3">
+	</label>
+
+	<label><input type="radio" value="show" onclick="imgs(4)" name="lang">
+		<img src="img/Images/placeholders/04.png" alt="background 4">
+	</label>
+</section>
+
+<!-- Image Placement -->
+<section class="images">
+<img id="myimgs" src="img/Images/01.png" alt="additional 1" style="display:none;">
+<img id="myimgs2" src="img/Images/02.png" alt="additional 2" style="display:;">
+<img id="myimgs3" src="img/Images/03.png" alt="additional 3" style="display:none;">
+<img id="myimgs4" src="img/Images/04.png" alt="additional 4" style="display:none;">
+</section>
+
+<!-- Clear Button Section -->
+<section id="clearbuttons">
+	<label id="button1">
+			<input type="radio" value="show" name="lang" onclick="img(0)">
+			<div class="container container-one">
+				<button>
+					CLEAR SELECTION
+					<div class="fill-one"></div>
+				</button>
+			</div>
+	</label>
+<br>
+	<label id="button2">
+		<input type="radio" value="show" name="lang" onclick="txt(0)">
+		<div class="container container-one">
+			<button>Clear Title Selection
+				<div class="fill-one"></div>
+			</button>
+		</div>
+	</label>
+<br>
+	<label id="button3">
+		<input type="radio" value="show" name="lang" onclick="imgs(0)">
+		<div class="container container-one">
+			<button>CLEAR SELECTION
+				<div class="fill-one"></div>
+			</button>
+		</div>
+	</label>
+</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
